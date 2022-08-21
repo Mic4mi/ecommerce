@@ -1,0 +1,88 @@
+.navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444444;
+}
+
+.a-main-nav,
+.a-main-nav :hover,
+.a-main-nav :active,
+.a-main-nav :visited {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+.logo-brand {
+    display: flex;
+    flex-direction: row;
+}
+
+.log-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.li-separator {
+    color: whitesmoke
+}
+
+.li-nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.log-section {
+    padding-right: 15px;
+}
+
+.log-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: #61DAFB;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.log-btn-hover {
+    background-color: white;
+    color: black;
+}
+
+.log-btn-hover:hover {
+    background-color: #61DAFB;
+    color: white;
+}
+
+#brand {
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+#navigation-links {
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 100px;
+}
