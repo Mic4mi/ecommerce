@@ -1,0 +1,24 @@
+.log-btn {
+    margin: 8px 5px 8px 5px;
+    background-color: #61DAFB;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.log-btn-hover {
+    background-color: white;
+    color: black;
+}
+
+.log-btn-hover:hover {
+    background-color: #61DAFB;
+    color: white;
+}

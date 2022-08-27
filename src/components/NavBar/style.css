@@ -41,8 +41,7 @@
 }
 
 .log-btn {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 8px 5px 8px 5px;
     background-color: #61DAFB;
     border: none;
     color: white;

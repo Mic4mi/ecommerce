@@ -1,7 +1,9 @@
 import './style.css';
 import logo from '../../logo.svg'
+import CartWidget from '../CartWidget/CartWidget';
 
-export const NavBar = (props) => {
+
+function NavBar() {
     return (
         <div className='navbar-container'>
             <div className="logo-brand">
@@ -21,7 +23,10 @@ export const NavBar = (props) => {
             <div className="log-section">
                 <button className="log-btn log-btn-hover">Login</button>
                 <button className="log-btn log-btn-hover">Sign up</button>
+                <CartWidget />
             </div>
         </div>
     )
 }
+
+export default NavBar;
