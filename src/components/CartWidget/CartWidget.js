@@ -1,9 +1,11 @@
 import './style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 function CartWidget() {
     return (
-        <button className="log-btn log-btn-hover">
-            <i class="fa-solid fa-cart-shopping"></i>
+        <button className="cart-btn cart-btn-hover">
+            <FontAwesomeIcon icon={faCartShopping} />
         </button>
     )
 }

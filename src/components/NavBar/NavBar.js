@@ -1,23 +1,34 @@
 import './style.css';
-import logo from '../../logo.svg'
+import planet from '../../planet.png'
 import CartWidget from '../CartWidget/CartWidget';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 
 function NavBar() {
     return (
         <div className='navbar-container'>
             <div className="logo-brand">
-                <img id="logo" src={logo} alt="logo" />
+                <img id="logo" src={planet} alt="logo" />
                 <p id="brand">Saturno</p>
             </div>
             <div className="navigation-links">
                 <ul id="main-links">
-                    <li className="li-separator">/</li>
-                    <li className="li-nav-item"><a className="a-main-nav" href="#">Home</a></li>
-                    <li className="li-separator">/</li>
-                    <li className="li-nav-item"><a className="a-main-nav" href="#">Contact</a></li>
-                    <li className="li-separator">/</li>
-                    <li className="li-nav-item"><a className="a-main-nav" href="#">About</a></li>
+                    <li className="li-nav-item"><a className="a-main-nav" href="/#">
+                        Home
+                    </a></li>
+                    <li className="li-separator">
+                        <FontAwesomeIcon icon={faCircle} />
+                    </li>
+                    <li className="li-nav-item"><a className="a-main-nav" href="/#">
+                        Contact
+                    </a></li>
+                    <li className="li-separator">
+                        <FontAwesomeIcon icon={faCircle} />
+                    </li>
+                    <li className="li-nav-item"><a className="a-main-nav" href="/#">
+                        About
+                    </a></li>
                 </ul>
             </div>
             <div className="log-section">
