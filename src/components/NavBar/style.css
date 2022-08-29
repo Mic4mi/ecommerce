@@ -8,8 +8,7 @@
     background-color: #444444;
 }
 
-.a-main-nav,
-.a-main-nav :hover,
+/* .a-main-nav,
 .a-main-nav :active,
 .a-main-nav :visited {
     text-decoration: none;
@@ -17,9 +16,51 @@
     font-size: 16px;
 }
 
+.a-main-nav :hover {
+    color: red;
+} */
+
+.a-main-nav {
+    background-image: linear-gradient(to right,
+            #46dcd1,
+            #46dcd1 50%,
+            rgb(255, 255, 255) 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.a-main-nav:before {
+    content: '';
+    background: #46dcd1;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.a-main-nav:hover {
+    background-position: 0;
+}
+
+.a-main-nav:hover::before {
+    width: 100%;
+}
+
 .logo-brand {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .log-section {
@@ -28,12 +69,15 @@
 }
 
 .li-separator {
-    color: whitesmoke
+    font-size: 8px;
+    color: whitesmoke;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .li-nav-item {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .log-section {
@@ -42,7 +86,7 @@
 
 .log-btn {
     margin: 8px 5px 8px 5px;
-    background-color: #61DAFB;
+    background-color: #46dcd1;
     border: none;
     color: white;
     padding: 8px 16px;
@@ -61,7 +105,7 @@
 }
 
 .log-btn-hover:hover {
-    background-color: #61DAFB;
+    background-color: #46dcd1;
     color: white;
 }
 
@@ -71,7 +115,7 @@
 }
 
 #navigation-links {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -79,9 +123,13 @@
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+    font-weight: bold;
 }
 
 #logo {
-    width: 100px;
+    width: 50px;
+    height: 50px;
+    margin: 3px 12px 3px 12px;
 }
