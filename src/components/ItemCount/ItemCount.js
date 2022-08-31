@@ -20,6 +20,7 @@ function ItemCount({ initialStock, stock, onAdd }) {
     };
     const onResetCounter = () => {
         setCounter(initialStockStoraged);
+        setOutOfStockIndicatorVisibility(false);
     };
     const onAddItems = () => {
         onResetCounter();
