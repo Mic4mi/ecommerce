@@ -5,7 +5,9 @@ function ItemListContainer({ greeting }) {
     return (
         <>
             {greeting}
-            <ItemCount initialStock={0} stock={3}/>
+            <ItemCount initialStock={1} stock={3} onAdd={(AddItemCB) => {
+                AddItemCB();
+            }} />
         </>
     )
 }
