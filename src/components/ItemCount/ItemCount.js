@@ -48,4 +48,4 @@ function ItemCount({ initialStock, stock, onAdd }) {
     )
 }
 
-export default ItemCount
+export default ItemCount;
