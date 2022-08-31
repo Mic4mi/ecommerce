@@ -5,43 +5,43 @@ const mockdata = [{
     "description": "Reactive well-modulated capacity",
     "stock": 5,
     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
-}
-    // , {
-    //     "id": 2,
-    //     "name": "Phellodendron lavallei Dode",
-    //     "price": 184653.41,
-    //     "description": "Versatile 6th generation flexibility",
-    //     "stock": 73,
-    //     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
-    // }, {
-    //     "id": 3,
-    //     "name": "Astragalus emoryanus (Rydb.) Cory var. terlinguensis (Cory) Barneby",
-    //     "price": 44154.37,
-    //     "description": "Grass-roots uniform matrix",
-    //     "stock": 5,
-    //     "img": "http://dummyimage.com/250x200.png/dddddd/000000"
-    // }, {
-    //     "id": 4,
-    //     "name": "Rhynchospora floridensis (Britton) H. Pfeiffer",
-    //     "price": 499062.5,
-    //     "description": "Diverse system-worthy product",
-    //     "stock": 8,
-    //     "img": "http://dummyimage.com/250x200.png/cc0000/ffffff"
-    // }, {
-    //     "id": 5,
-    //     "name": "Aquilegia barnebyi Munz",
-    //     "price": 478660.37,
-    //     "description": "Optional grid-enabled internet solution",
-    //     "stock": 29,
-    //     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
-    // }, {
-    //     "id": 6,
-    //     "name": "Digitalis purpurea L.",
-    //     "price": 121099.63,
-    //     "description": "Right-sized reciprocal Graphical User Interface",
-    //     "stock": 66,
-    //     "img": "http://dummyimage.com/250x200.png/5fa2dd/ffffff"
-    // }, {
+}, {
+    "id": 2,
+    "name": "Phellodendron",
+    "price": 184653.41,
+    "description": "Versatile 6th generation flexibility",
+    "stock": 73,
+    "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
+}, {
+    "id": 3,
+    "name": "Astragalus",
+    "price": 44154.37,
+    "description": "Grass-roots uniform matrix",
+    "stock": 5,
+    "img": "http://dummyimage.com/250x200.png/dddddd/000000"
+}, {
+    "id": 4,
+    "name": "Rhynchospora",
+    "price": 499062.5,
+    "description": "Diverse system-worthy product",
+    "stock": 8,
+    "img": "http://dummyimage.com/250x200.png/cc0000/ffffff"
+}, {
+    "id": 5,
+    "name": "Aquilegia",
+    "price": 478660.37,
+    "description": "Optional grid-enabled internet solution",
+    "stock": 29,
+    "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
+}, {
+    "id": 6,
+    "name": "Digitalis purpurea",
+    "price": 121099.63,
+    "description": "Right-sized reciprocal Graphical User Interface",
+    "stock": 66,
+    "img": "http://dummyimage.com/250x200.png/5fa2dd/ffffff"
+},
+    //{
     //     "id": 7,
     //     "name": "Vitex agnus-castus L. var. agnus-castus",
     //     "price": 418036.3,

@@ -23,18 +23,15 @@ function ItemListContainer({ greeting }) {
     }, []);
 
     return (
-        // TO-DO estilizar componentes
-        <>
+        // // TO-DO estilizar componentes
+        <div className='ListContainer'>
             {/* {greeting} */}
-            {/* <ItemCount initialStock={1} stock={3} onAdd={(AddItemCB) => {
-                AddItemCB();
-            }} /> */}
             {
                 items.length > 0
                     ? (<ItemList items={items} />)
                     : (<div>Cargando...</div>)
             }
-        </>
+        </div>
     )
 }
 
