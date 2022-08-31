@@ -10,7 +10,7 @@ const mockdata = [{
     "name": "Phellodendron",
     "price": 184653.41,
     "description": "Versatile 6th generation flexibility",
-    "stock": 73,
+    "stock": 3,
     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
 }, {
     "id": 3,
@@ -31,14 +31,14 @@ const mockdata = [{
     "name": "Aquilegia",
     "price": 478660.37,
     "description": "Optional grid-enabled internet solution",
-    "stock": 29,
+    "stock": 9,
     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
 }, {
     "id": 6,
     "name": "Digitalis purpurea",
     "price": 121099.63,
     "description": "Right-sized reciprocal Graphical User Interface",
-    "stock": 66,
+    "stock": 6,
     "img": "http://dummyimage.com/250x200.png/5fa2dd/ffffff"
 },
     //{

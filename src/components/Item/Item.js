@@ -2,7 +2,7 @@ import './style.css';
 import ItemCount from '../ItemCount/ItemCount';
 
 // TO-DO estilizar componentes
-function Item({ id, name, description, price, stock, img }) {
+function Item({ name, description, price, stock, img }) {
     return (
         <div className='ItemContainer'>
             <div className='DescriptionContainer'>
@@ -13,7 +13,7 @@ function Item({ id, name, description, price, stock, img }) {
                     <h5 id="productPrice" className='text-desc-product'>${price}</h5>
                 </div>
             </div>
-            <ItemCount initialStock={1} stock={3} onAdd={(AddItemCB) => {
+            <ItemCount initialStock={1} stock={stock} onAdd={(AddItemCB) => {
                 AddItemCB();
             }} />
         </div>

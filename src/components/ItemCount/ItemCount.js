@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
 
 function ItemCount({ initialStock, stock, onAdd }) {
-    const initialStockStoraged = initialStock;
     const [counter, setCounter] = useState(initialStock);
     const [outOfStockIndicatorVisibility, setOutOfStockIndicatorVisibility] = useState(false);
     const onAddOne = () => {
@@ -18,12 +17,7 @@ function ItemCount({ initialStock, stock, onAdd }) {
         if (counter <= stock) { setOutOfStockIndicatorVisibility(false) }
         setCounter(counter - 1);
     };
-    const onResetCounter = () => {
-        setCounter(initialStockStoraged);
-        setOutOfStockIndicatorVisibility(false);
-    };
     const onAddItems = () => {
-        onResetCounter();
         console.log(`Actualmente estás comprando ${counter} ${counter > 1 ? 'items' : 'item'}`);
     };
     const onAddItemsToCart = () => {
