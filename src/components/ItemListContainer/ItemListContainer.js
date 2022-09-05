@@ -23,7 +23,7 @@ function ItemListContainer({ greeting }) {
     }, []);
 
     return (
-        // // TO-DO estilizar componentes
+        // TO-DO estilizar componentes
         <div className='ListContainer'>
             {/* {greeting} */}
             {
