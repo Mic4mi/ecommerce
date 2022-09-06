@@ -27,7 +27,7 @@ export const ItemDetailContainer = () => {
     }, [itemId]);
 
     return (
-        <div>
+        <div className='item-detail-container'>
             {
                 item
                     ? (

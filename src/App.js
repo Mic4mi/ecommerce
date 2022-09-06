@@ -19,9 +19,6 @@ function App() {
           <Route path="/Contact" element={<ContactPage />} />
           <Route path="/About" element={<AboutPage />} />
         </Routes>
-        {/* 
-        <ItemListContainer greeting="Hello world!" />
-        <ItemDetailContainer /> */}
       </div>
     </BrowserRouter>
   );

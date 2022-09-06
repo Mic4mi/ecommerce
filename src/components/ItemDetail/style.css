@@ -1,0 +1,29 @@
+.item-detail {
+    padding: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 100px;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+column-description-detail {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.img {
+    width: 95%;
+}
+
+#img {
+    width: 100%;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
