@@ -6,15 +6,11 @@ function ItemList({ items }) {
     return (
         <>
             {
-                items.map((product) => {
+                items.map((item) => {
                     return (
                         <Item
-                            key={product.id}
-                            name={product.name}
-                            description={product.description}
-                            price={product.price}
-                            stock={product.stock}
-                            img={product.img}
+                            key={item.id}
+                            item={item}
                         />
                     )
                 })
