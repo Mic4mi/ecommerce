@@ -3,6 +3,8 @@ import planet from '../../planet.png'
 import CartWidget from '../CartWidget/CartWidget';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+
 
 
 function NavBar() {
@@ -14,21 +16,30 @@ function NavBar() {
             </div>
             <div className="navigation-links">
                 <ul id="main-links">
-                    <li className="li-nav-item"><a className="a-main-nav" href="/#">
-                        Home
-                    </a></li>
+                    <li className="li-nav-item">
+                        <a className="a-main-nav" href="/">
+                            Home
+                        </a>
+                        <Link to="/" />
+                    </li>
                     <li className="li-separator">
                         <FontAwesomeIcon icon={faCircle} />
                     </li>
-                    <li className="li-nav-item"><a className="a-main-nav" href="/#">
-                        Contact
-                    </a></li>
+                    <li className="li-nav-item">
+                        <a className="a-main-nav" href="/Contact">
+                            Contact
+                        </a>
+                        <Link to="/Contact" />
+                    </li>
                     <li className="li-separator">
                         <FontAwesomeIcon icon={faCircle} />
                     </li>
-                    <li className="li-nav-item"><a className="a-main-nav" href="/#">
-                        About
-                    </a></li>
+                    <li className="li-nav-item">
+                        <a className="a-main-nav" href="/About">
+                            About
+                        </a>
+                        <Link to="/About" />
+                    </li>
                 </ul>
             </div>
             <div className="log-section">
