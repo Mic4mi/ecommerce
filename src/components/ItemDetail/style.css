@@ -16,12 +16,20 @@ column-description-detail {
     padding-top: 10%;
 }
 
+.description-price {
+    padding-top: 10%;
+}
+
 .img {
-    width: 95%;
+    width: fit-content
 }
 
 #img {
-    width: 100%;
+    width: 550px;
+}
+
+#product-name {
+    font-size: 30px;
 }
 
 hr.solid {

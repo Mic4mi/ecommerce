@@ -1,0 +1,12 @@
+.social-media-icons-container {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.social-media-icons a {
+    font-size: 2rem;
+    color: #444444;
+}

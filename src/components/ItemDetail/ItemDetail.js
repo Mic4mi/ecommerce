@@ -8,13 +8,13 @@ export const ItemDetail = ({ name, description, price, stock, img }) => {
     return (
         <div className='item-detail'>
             <div className='column-description-detail'>
-                <h1>{name}</h1>
+                <h1 id="product-name">{name}</h1>
                 <div className='img'>
                     <img id="img" src={img} alt={name} />
                 </div>
                 <SocialMediaSharing />
             </div>
-            <div className='column-description-detail'>
+            <div className='column-description-detail description-price'>
                 <PaymentMethods price={price} />
                 <hr />
                 <div className="description-add-item">
