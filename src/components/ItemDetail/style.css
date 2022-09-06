@@ -1,0 +1,37 @@
+.item-detail {
+    padding: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 100px;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+column-description-detail {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    padding-top: 10%;
+}
+
+.description-price {
+    padding-top: 10%;
+}
+
+.img {
+    width: fit-content
+}
+
+#img {
+    width: 550px;
+}
+
+#product-name {
+    font-size: 30px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}

@@ -1,0 +1,60 @@
+.price-payment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.payment-methods{
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.product-payment-logos-img {
+    height: 20px;
+    margin: 0 1px 0 0;
+}
+
+.card-img {
+    margin: 0 5px 5px 0;
+    border: 1px solid #00000012;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 0px 0 rgb(0 0 0 / 5%);
+    -ms-box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 0px 0 rgb(0 0 0 / 5%);
+}
+
+.payment-credit-icon {
+    width: 24px;
+    line-height: 12px;
+    vertical-align: top;
+}
+
+ul.list-style-none {
+    padding: 0;
+}
+
+ul.list-style-none li {
+    list-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+#payment-method-text{
+    margin-bottom: 0%;
+}
