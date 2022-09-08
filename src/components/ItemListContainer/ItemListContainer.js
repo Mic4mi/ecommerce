@@ -1,24 +1,16 @@
 import './style.css';
 import { useState, useEffect } from "react"
-import mockdata from '../../mockdata/mockdata';
+import mockdata from '../../utils/mockdata/mockdata';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom'
+import { commons } from '../../utils/helper/commons';
 
 function ItemListContainer({ greeting }) {
     const { categoryId } = useParams();
-    // TO-DO añadir handling de errores
     const [items, setItems] = useState([]);
-    const getData = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(mockdata);
-            }, 2000);
-        })
-    };
-
     // TO-DO añadir handling de errores
     useEffect(() => {
-        getData()
+        commons.getDataFromDataBase(mockdata)
             .then((result) => {
                 if (categoryId) {
                     const currentItems = result.filter(
@@ -32,7 +24,6 @@ function ItemListContainer({ greeting }) {
     }, [categoryId]);
 
     return (
-        // TO-DO estilizar componentes
         <div className='ListContainer'>
             {/* {greeting} */}
             {
