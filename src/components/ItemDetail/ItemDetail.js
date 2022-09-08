@@ -2,7 +2,7 @@ import './style.css';
 import ItemCount from '../ItemCount/ItemCount';
 import { PostalCodeCalculator } from '../PostalCodeCalculator/PostalCodeCalculator';
 import { PaymentMethods } from '../PaymentMethods/PaymentMethods';
-import { SocialMediaSharing } from '../../SocialMediaSharing/SocialMediaSharing';
+import { SocialMediaSharing } from '../SocialMediaSharing/SocialMediaSharing';
 
 export const ItemDetail = ({ name, description, price, stock, img }) => {
     return (
@@ -11,8 +11,8 @@ export const ItemDetail = ({ name, description, price, stock, img }) => {
                 <h1 id="product-name">{name}</h1>
                 <div className='img'>
                     <img id="img" src={img} alt={name} />
+                    <SocialMediaSharing />
                 </div>
-                <SocialMediaSharing />
             </div>
             <div className='column-description-detail description-price'>
                 <PaymentMethods price={price} />

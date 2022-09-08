@@ -21,11 +21,12 @@ column-description-detail {
 }
 
 .img {
-    width: fit-content
+    width: 85%;
+
 }
 
 #img {
-    width: 550px;
+    width: inherit;
 }
 
 #product-name {

@@ -10,7 +10,7 @@ function Item({item}) {
     return (
         <div className='ItemContainer'>
             <div className='DescriptionContainer'>
-                <Link to={`/Item/${item.id}`}>
+                <Link to={`/item/${item.id}`}>
                     <img src={item.img} alt={item.name} />
                 </Link>
                 <div className='TextContent'>

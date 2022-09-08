@@ -3,7 +3,7 @@ const mockdata = [{
     "name": "Tetramolopium",
     "price": 443295.8,
     "description": "Reactive well-modulated capacity",
-    "category": "Planet",
+    "category": "planet",
     "stock": 5,
     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
 }, {
@@ -11,7 +11,7 @@ const mockdata = [{
     "name": "Phellodendron",
     "price": 184653.41,
     "description": "Versatile 6th generation flexibility",
-    "category": "Star",
+    "category": "star",
     "stock": 3,
     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
 }, {
@@ -19,7 +19,7 @@ const mockdata = [{
     "name": "Astragalus",
     "price": 44154.37,
     "description": "Grass-roots uniform matrix",
-    "category": "Comet",
+    "category": "comet",
     "stock": 5,
     "img": "http://dummyimage.com/250x200.png/dddddd/000000"
 }, {
@@ -27,7 +27,7 @@ const mockdata = [{
     "name": "Rhynchospora",
     "price": 499062.5,
     "description": "Diverse system-worthy product",
-    "category": "Comet",
+    "category": "comet",
     "stock": 8,
     "img": "http://dummyimage.com/250x200.png/cc0000/ffffff"
 }, {
@@ -36,7 +36,7 @@ const mockdata = [{
     "price": 478660.37,
     "description": "Optional grid-enabled internet solution",
 
-    "category": "Star",
+    "category": "star",
     "stock": 9,
     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
 }, {
@@ -45,24 +45,25 @@ const mockdata = [{
     "price": 121099.63,
     "description": "Right-sized reciprocal Graphical User Interface",
 
-    "category": "Star",
+    "category": "star",
     "stock": 6,
     "img": "http://dummyimage.com/250x200.png/5fa2dd/ffffff"
 },
+{
+    "id": 7,
+    "name": "Vitex agnus-castus",
+    "price": 418036.3,
+    "description": "Implemented transitional monitoring",
+    "category": "galaxy",
+    "stock": 80,
+    "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
+},
     //{
-    //     "id": 7,
-    //     "name": "Vitex agnus-castus L. var. agnus-castus",
-    //     "price": 418036.3,
-    //     "description": "Implemented transitional monitoring",
-    // "category": "Star"    
-    //"stock": 80,
-    //     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
-    // }, {
     //     "id": 8,
     //     "name": "Acarospora saepincola H. Magn.",
     //     "price": 480593.72,
     //     "description": "Balanced incremental strategy",
-    // "category": "Star"    
+    // "category": "star"    
     //"stock": 9,
     //     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"
     // }, {
@@ -70,7 +71,7 @@ const mockdata = [{
     //     "name": "Physcia sorediosa (Vain.) Lynge",
     //     "price": 161842.1,
     //     "description": "Polarised clear-thinking capacity",
-    // "category": "Star"    
+    // "category": "star"    
     //"stock": 8,
     //     "img": "http://dummyimage.com/250x200.png/dddddd/000000"
     // }, {
