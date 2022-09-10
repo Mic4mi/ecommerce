@@ -4,6 +4,7 @@ import mockdata from '../../utils/mockdata/mockdata';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom'
 import { commons } from '../../utils/helper/commons';
+import { Loader } from '../Loader/Loader';
 
 function ItemListContainer({ greeting }) {
     const { categoryId } = useParams();
@@ -29,7 +30,7 @@ function ItemListContainer({ greeting }) {
             {
                 items.length > 0
                     ? (<ItemList items={items} />)
-                    : (<div>Cargando...</div>)
+                    : (<Loader />)
             }
         </div>
     )

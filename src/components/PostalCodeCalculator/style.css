@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
 }
 
 .input-postalcode {
@@ -17,7 +16,7 @@
 .calc-postalcode-btn {
     height: 50px;
     width: 210px;
-    margin-top: 2%;
+    margin-top: 5%;
     border: 1px solid lightgray;
     color: black;
     text-align: center;

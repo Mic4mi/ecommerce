@@ -63,7 +63,7 @@
 .item-count-addToCart-btn:hover {
     /* background-color: #46dcd1; */
     background: rgb(70, 220, 209);
-    background: linear-gradient(90deg, rgba(70, 220, 209, 1) 0%, rgba(155, 175, 224, 1) 50%, rgba(233, 133, 238, 1) 100%);
+    background: linear-gradient(90deg, #46dcd1 0%, #9bafe0 50%, #e985ee 100%);
     color: white;
     transition: 0.4s;
 }

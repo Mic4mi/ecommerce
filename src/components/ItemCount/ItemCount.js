@@ -17,15 +17,10 @@ function ItemCount({ initialStock, stock, onAdd }) {
         if (counter <= stock) { setOutOfStockIndicatorVisibility(false) }
         setCounter(counter - 1);
     };
-    const onAddItems = () => {
-        console.log(`Actualmente estás comprando ${counter} ${counter > 1 ? 'items' : 'item'}`);
-    };
-    const onAddItemsToCart = () => {
-        onAdd(onAddItems);
-    };
 
     return (
         <div className='item-count-container'>
+            {/* <p>Stock disponible {currentStock ? currentStock : stock}</p> */}
             <div className='counter-box'>
                 <button onClick={onAddOne} className='item-count-btn item-count-btn-hover'>
                     <FontAwesomeIcon icon={faPlus} />
@@ -36,7 +31,9 @@ function ItemCount({ initialStock, stock, onAdd }) {
                 </button>
             </div>
             {outOfStockIndicatorVisibility ? <OutOfStockIndicator /> : null}
-            <button className='item-count-addToCart-btn' onClick={onAddItemsToCart}>
+            <button className='item-count-addToCart-btn' onClick={() => {
+                onAdd(counter);
+            }}>
                 Añadir al carrito
             </button>
         </div>

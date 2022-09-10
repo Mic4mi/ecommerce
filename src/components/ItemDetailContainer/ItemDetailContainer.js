@@ -4,10 +4,11 @@ import mockdata from '../../utils/mockdata/mockdata';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import { commons } from '../../utils/helper/commons';
+import { Loader } from '../Loader/Loader';
 
 export const ItemDetailContainer = () => {
     const { itemId } = useParams();
-    const [item, setItem] = useState({});
+    const [item, setItem] = useState(null);
 
     // TO-DO añadir handling de errores
     useEffect(() => {
@@ -24,8 +25,9 @@ export const ItemDetailContainer = () => {
     return (
         <div className='item-detail-container'>
             {
-                item
-                    ? (
+                !item
+                    ? (<Loader />)
+                    : (
                         <ItemDetail
                             name={item.name}
                             description={item.description}
@@ -33,7 +35,6 @@ export const ItemDetailContainer = () => {
                             stock={item.stock}
                             img={item.img} />
                     )
-                    : (<div>Cargando...</div>)
             }
         </div>
     )

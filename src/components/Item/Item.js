@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 // import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer';
 
 // TO-DO estilizar componentes
-function Item({item}) {
+function Item({ item }) {
     //key, name, description, price, stock, img
     // TO-DO Linkear la imagen al id
     return (
@@ -19,8 +19,8 @@ function Item({item}) {
                     <h5 id="productPrice" className='text-desc-product'>${item.price}</h5>
                 </div>
             </div>
-            <ItemCount initialStock={1} stock={item.stock} onAdd={(AddItemCB) => {
-                AddItemCB();
+            <ItemCount initialStock={1} stock={item.stock} onAdd={() => {
+                console.log("Item added!");
             }} />
         </div>
     )

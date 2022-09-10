@@ -12,12 +12,12 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <NavBar />
-        <Filterbar/>
+        <Filterbar />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/product" element={<ItemListContainer />} />
           <Route path="/product/:categoryId" element={<ItemListContainer />} />
-          <Route path="/item/:itemId/" element={<ItemDetailContainer/>} />
+          <Route path="/item/:itemId/" element={<ItemDetailContainer />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
