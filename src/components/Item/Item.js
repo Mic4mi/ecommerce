@@ -1,5 +1,4 @@
 import './style.css';
-import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom'
 // import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer';
 
@@ -19,9 +18,6 @@ function Item({ item }) {
                     <h5 id="productPrice" className='text-desc-product'>${item.price}</h5>
                 </div>
             </div>
-            <ItemCount initialStock={1} stock={item.stock} onAdd={() => {
-                console.log("Item added!");
-            }} />
         </div>
     )
 }

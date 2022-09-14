@@ -28,14 +28,10 @@ export const ItemDetailContainer = () => {
                 !item
                     ? (<Loader />)
                     : (
-                        <ItemDetail
-                            name={item.name}
-                            description={item.description}
-                            price={item.price}
-                            stock={item.stock}
-                            img={item.img} />
+                        <ItemDetail item={item}/>
                     )
             }
         </div>
     )
 }
+
