@@ -3,12 +3,16 @@ import ItemCount from '../ItemCount/ItemCount';
 import { PostalCodeCalculator } from '../PostalCodeCalculator/PostalCodeCalculator';
 import { PaymentMethods } from '../PaymentMethods/PaymentMethods';
 import { SocialMediaSharing } from '../SocialMediaSharing/SocialMediaSharing';
-import { useState } from 'react';
+import { CartContext } from '../../context/CartContext';
+import { useState, useContext } from 'react';
 
-export const ItemDetail = ({ name, description, price, stock, img }) => {
+export const ItemDetail = ({ item }) => {
+    const { name, description, price, stock, img } = item;
+    const { addItem } = useContext(CartContext);
     const [itemsToBuy, setItemsToBuy] = useState(0);
     const onAddItem = (counter) => {
         setItemsToBuy(counter);
+        addItem(item, counter);
     };
     return (
         <div className='item-detail'>
