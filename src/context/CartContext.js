@@ -7,9 +7,9 @@ export const CartProvider = ({ children }) => {
     const [cartListProducts, setCartListProducts] = useState([]);
 
     const addItem = (item, quantity) => {
-        const productExist = isInCart(item.id);
-        if (!productExist.exist) {
-            const purchaseItems = [...cartListProducts];
+        const searchedProduct = isInCart(item.id);
+        const purchaseItems = [...cartListProducts];
+        if (!searchedProduct.exist) {
             purchaseItems.push({
                 ...item,
                 quantity
@@ -17,8 +17,10 @@ export const CartProvider = ({ children }) => {
             setCartListProducts(purchaseItems);
             return;
         }
-        if (productExist.exist) {
-            productExist.item.quantity = productExist.item.quantity + quantity;
+        if (searchedProduct.exist) {
+            const itemPosition = purchaseItems.findIndex(item => item.id === searchedProduct.item.id);
+            purchaseItems[itemPosition].quantity += quantity;
+            setCartListProducts(purchaseItems);
             return;
         }
     };
@@ -33,9 +35,8 @@ export const CartProvider = ({ children }) => {
     };
 
     const isInCart = (itemId) => {
+        const productExist = cartListProducts.some(item => item.id === itemId);
         const existingProduct = cartListProducts.find(item => item.id === itemId);
-        let productExist = false;
-        existingProduct ? productExist = true : productExist = false;
         return { exist: productExist, item: existingProduct };
     };
 
