@@ -6,31 +6,19 @@ export const Filterbar = () => {
         <div className='filterbar-container'>
             <ul id="filters">
                 <li >
-                    <a className='a-filters-nav' href="/product/planet">
-                        Planets
-                    </a>
-                    <Link to="/product/planet" />
+                    <Link to="/product/planet" className='a-filters-nav'>Planets</Link>
                 </li>
                 <li >
-                    <a className='a-filters-nav' href="/product/comet">
-                        Comets
-                    </a>
-                    <Link to="/product/comet" />
+                    <Link to="/product/comet" className='a-filters-nav'>Comets</Link>
                 </li>
                 <li >
-                    <a className='a-filters-nav' href="/product/star">
-                        Stars
-                    </a>
-                    <Link to="/product/star" />
+                    <Link to="/product/star" className='a-filters-nav'>Stars</Link>
                 </li>
                 <li >
-                    <a className='a-filters-nav' href="/product/galaxy">
-                        Galaxies
-                    </a>
-                    <Link to="/product/galaxy" />
+                    <Link to="/product/galaxy" className='a-filters-nav'>Galaxies</Link>
                 </li>
             </ul>
-            <hr className='filterbar-separator'/>
+            <hr className='filterbar-separator' />
         </div>
     )
 }
