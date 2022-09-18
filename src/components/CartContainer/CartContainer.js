@@ -2,10 +2,11 @@ import './style.css';
 import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import { EmptyCart } from '../../EmptyCart/EmptyCart';
 
 export const CartContainer = () => {
-    const { cartListProducts, removeItem, clearCart } = useContext(CartContext);
+    const { cartListProducts, removeItem, clearCart, getTotalPrice } = useContext(CartContext);
     return (
         <div className='cart-container'>
             {
@@ -17,23 +18,23 @@ export const CartContainer = () => {
                                 <div key={item.id} className='item-to-purchase'>
                                     <div>
                                         <p>{item.name} x{item.quantity}</p>
-                                        <p>${item.price}</p>
+                                        <p>${item.quantityPrice}</p>
                                         <hr></hr>
                                     </div>
-                                    <button className='list-btn erase-btn' onClick={() => { removeItem(item.id) }}>
-                                        <FontAwesomeIcon icon={faXmark} />
+                                    <button className='list-btn delete-one-item-btn' onClick={() => { removeItem(item.id) }}>
+                                        <FontAwesomeIcon icon={faTrashCan} />
                                     </button>
                                 </div>
                             ))}
                         </div>
                         <div className='display-total'>
-                            <h4>Total compra: </h4>
-                            <button className='erase-btn' onClick={clearCart}>Vaciar carrito</button>
-                            <button className='erase-btn' onClick={clearCart}>Pagar</button>
+                            <h4>Total compra: ${getTotalPrice()}</h4>
+                            <button className='purchase-end-btn purchase-btn' onClick={clearCart}>Vaciar carrito</button>
+                            <button className='purchase-end-btn purchase-btn'>Pagar</button>
                         </div>
                     </div>
                     )
-                    : (<p>No hay nada en el carrito aun...</p>)
+                    : (<EmptyCart />)
             }
         </div>
     )
