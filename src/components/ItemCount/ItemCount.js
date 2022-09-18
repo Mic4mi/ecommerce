@@ -3,6 +3,7 @@ import { useState } from "react";
 import OutOfStockIndicator from '../OutOfStockIndicator/OutOfStockIndicator';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+import { Toaster, toast } from 'react-hot-toast';
 
 function ItemCount({ initialStock, stock, onAdd }) {
     const [counter, setCounter] = useState(initialStock);
@@ -33,9 +34,11 @@ function ItemCount({ initialStock, stock, onAdd }) {
             {outOfStockIndicatorVisibility ? <OutOfStockIndicator /> : null}
             <button className='item-count-addToCart-btn' onClick={() => {
                 onAdd(counter);
+                toast.success('Item agregado al carrito!', { duration: 3000, });
             }}>
                 Añadir al carrito
             </button>
+            <Toaster position='bottom-center' toastOptions={{ className: 'toaster' }} />
         </div>
     )
 }
