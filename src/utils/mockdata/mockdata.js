@@ -35,7 +35,6 @@ const mockdata = [{
     "name": "Aquilegia",
     "price": 478660.37,
     "description": "Optional grid-enabled internet solution",
-
     "category": "star",
     "stock": 9,
     "img": "http://dummyimage.com/250x200.png/ff4444/ffffff"

@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
-import { EmptyCart } from '../../EmptyCart/EmptyCart';
+import { EmptyCart } from '../EmptyCart/EmptyCart';
 
 export const CartContainer = () => {
     const { cartListProducts, removeItem, clearCart, getTotalPrice } = useContext(CartContext);
