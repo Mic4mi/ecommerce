@@ -1,6 +1,5 @@
 import './style.css';
 import { useState, useEffect } from "react"
-import mockdata from '../../utils/mockdata/mockdata';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom'
 import { commons } from '../../utils/helper/commons';
@@ -11,13 +10,13 @@ function ItemListContainer({ greeting }) {
     const [items, setItems] = useState([]);
     // TO-DO añadir handling de errores
     useEffect(() => {
-        commons.getDataFromDataBase(mockdata)
+        commons.getData()
             .then((result) => {
                 if (categoryId) {
-                    const currentItems = result.filter(
-                        item => item.category === categoryId
-                    );
-                    setItems(currentItems);
+                    commons.getDataByCategory(categoryId)
+                        .then((result) => {
+                            setItems(result);
+                        })
                 } else {
                     setItems(result);
                 }

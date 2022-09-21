@@ -1,6 +1,5 @@
 import './style.css';
 import { useState, useEffect } from "react"
-import mockdata from '../../utils/mockdata/mockdata';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import { commons } from '../../utils/helper/commons';
@@ -12,14 +11,10 @@ export const ItemDetailContainer = () => {
 
     // TO-DO añadir handling de errores
     useEffect(() => {
-        const getItem = async () => {
-            const item = await commons.getDataFromDataBase(null,
-                () => {
-                    return mockdata.find(item => item.id === parseInt(itemId));
-                });
-            setItem(item);
-        }
-        getItem();
+        commons.getItem(itemId)
+            .then((result) => {
+                setItem(result);
+            })
     }, [itemId]);
 
     return (
@@ -28,7 +23,7 @@ export const ItemDetailContainer = () => {
                 !item
                     ? (<Loader />)
                     : (
-                        <ItemDetail item={item}/>
+                        <ItemDetail item={item} />
                     )
             }
         </div>

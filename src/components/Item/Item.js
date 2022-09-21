@@ -10,7 +10,7 @@ function Item({ item }) {
         <div className='ItemContainer'>
             <div className='DescriptionContainer'>
                 <Link to={`/item/${item.id}`}>
-                    <img src={item.img} alt={item.name} />
+                    <img id="product-img" src={item.img} alt={item.name} />
                 </Link>
                 <div className='TextContent'>
                     <h5 id="productName" className='text-desc-product'>{item.name}</h5>
