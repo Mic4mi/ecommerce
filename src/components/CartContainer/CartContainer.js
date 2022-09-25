@@ -5,38 +5,51 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { EmptyCart } from '../EmptyCart/EmptyCart';
 import { db } from '../../utils/firebase';
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc } from 'firebase/firestore';
+import { Toaster, toast } from 'react-hot-toast';
 
 export const CartContainer = () => {
     const { cartListProducts, removeItem, clearCart, getTotalPrice } = useContext(CartContext);
     const [orderID, setOrderID] = useState('');
+    const getProfileData = (event) => {
+        let isValid = false;
+        event.target['name'].value && event.target['phone'].value && event.target['email'].value
+            ? isValid = true : isValid = false;
+        return isValid;
+    };
     const sendOrder = (event) => {
         event.preventDefault();
+        const isValid = getProfileData(event);
+        if (!isValid) {
+            toast.error(`Los datos para realizar la compra no son correctos.`, { duration: 3000, });
+            return;
+        }
         const order = {
             buyer: {
-                name: event.target[0].value,
-                phone: event.target[1].value,
-                email: event.target[2].value
+                name: event.target['name'].value,
+                phone: event.target['phone'].value,
+                email: event.target['email'].value
             },
             items: cartListProducts,
             date: new Date(),
             total: getTotalPrice()
         };
-        console.log("Orden enviada! ", order);
-        // Crear referencia
+
         const queryRef = collection(db, "orders");
-        // Store ref
         addDoc(queryRef, order)
-            // .then(async function (response) {
-            //     debugger;
-            //     await setOrderID(response.id);
-            //     console.log(`Su orden fue creada. Orden nro ${orderID} generada!!`);
-            // })
-            .then(({id})=>{
-                setOrderID(id);
-                console.log(`Su orden fue creada. Orden nro ${orderID} generada!!`);
+            .then((response) => {
+                setOrderID(response.id);
+                console.log(`Su orden fue creada. Orden nro ${response.id} generada!!`);
+                toast.success(`La orden ${response.id} ha sido generada`, { duration: 3000, });
+                // guardar los items agregador y el cartContainer en la memoria del navegador hasta actualizar la db
+                // Actualizar el stock de los productos en firebase
+                // Limpiar los campos de los formularios
+                // limpiar el carrito
             })
-            .catch(error => console.log("Error: ", error))
+            .catch((error) => {
+                toast.error(`Ocurrió un error procesando su solicitud`, { duration: 3000, });
+                console.log("Error: ", error)
+            })
     };
 
     return (
@@ -63,15 +76,15 @@ export const CartContainer = () => {
                             <h4>Total compra: ${getTotalPrice()}</h4>
                             <form onSubmit={sendOrder}>
                                 <label>Nombre:</label>
-                                <input type="text"></input>
+                                <input type="text" name="name"></input>
                                 <label>Teléfono</label>
-                                <input type="text"></input>
+                                <input type="text" name="phone"></input>
                                 <label>Correo</label>
-                                <input type="text"></input>
-                                <button type="submit">Send</button>
+                                <input type="text" name="email"></input>
+                                <button className='purchase-end-btn purchase-btn' type="submit">Pagar</button>
                             </form>
                             <button className='purchase-end-btn purchase-btn' onClick={clearCart}>Vaciar carrito</button>
-                            <button className='purchase-end-btn purchase-btn'>Pagar</button>
+                            <Toaster position='bottom-center' toastOptions={{ className: 'toaster' }} />
                         </div>
                     </div>
                     )
