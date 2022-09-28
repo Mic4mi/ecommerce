@@ -1,0 +1,37 @@
+.purchase-list {
+    padding-left: 15%;
+}
+
+.item-to-purchase {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.purchase-btn:enabled {
+    height: 50px;
+    padding: 15px 15px 15px 15px;
+    margin: 5px 10px 5px 0px;
+    width: fit-content;
+    border: 1px solid lightgray;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.purchase-btn:hover:enabled {
+    /* background-color: #46dcd1; */
+    background: rgb(70, 220, 209);
+    background: linear-gradient(90deg, #46dcd1 0%, #9bafe0 50%, #e985ee 100%);
+    color: white;
+    transition: 0.4s;
+}
+
+.purchase-end-btn:enabled {
+    width: 250px;
+}
