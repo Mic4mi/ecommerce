@@ -1,0 +1,57 @@
+.form-container {
+    margin: 5% 5% 5% 5%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#message-form{
+ display: flex;
+ flex-direction: column;
+}
+
+.purchase-btn:enabled {
+    height: 50px;
+    padding: 15px 15px 15px 15px;
+    margin: 5px 10px 5px 0px;
+    width: fit-content;
+    border: 1px solid lightgray;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.purchase-btn:hover:enabled {
+    /* background-color: #46dcd1; */
+    background: rgb(70, 220, 209);
+    background: linear-gradient(90deg, #46dcd1 0%, #9bafe0 50%, #e985ee 100%);
+    color: white;
+    transition: 0.4s;
+}
+
+.purchase-end-btn:enabled {
+    width: 250px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: none;
+}

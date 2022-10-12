@@ -62,7 +62,7 @@ export const CartContainer = () => {
 
         document.getElementById('purchase-btn').disabled = true;
 
-        // añadir orden
+        // Añadir orden
         const queryRef = collection(db, "orders");
         addDoc(queryRef, order)
             .then(async (response) => {
@@ -76,7 +76,6 @@ export const CartContainer = () => {
             })
             .catch((error) => {
                 toast.error(`Ocurrió un error procesando su solicitud`, { duration: 3000 });
-                console.log("Error: ", error)
             })
     };
 
