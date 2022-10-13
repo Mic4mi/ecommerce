@@ -1,5 +1,5 @@
 # Ecommmerce
-This project was done during the ReactJS course of the Coderhouse platform. The app model is based on the classic 'shopping cart'. 
+This purely [ReactJS](https://reactjs.org/)-based project was done during the ReactJS course of the Coderhouse platform. The app model is based on the classic 'shopping cart'. 
 It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 It also uses the [react-hot-toast](https://github.com/timolins/react-hot-toast) library to be able to use toast messages that display messages to the user as he/she executes certain actions on the page. 
 
