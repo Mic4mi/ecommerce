@@ -5,7 +5,7 @@ export const PaymentMethods = ({ price }) => {
         <div className='price-payment'>
             <h2>${price}</h2>
             <div className='payment-methods'>
-                <h4 id="payment-method-text">Medios de pago</h4>
+                <h4 id="payment-method-text">Payment Methods</h4>
                 <ul className="list-style-none">
                     <li className="d-inline-block">
                         <span className="js-product-detail-payment-logo">

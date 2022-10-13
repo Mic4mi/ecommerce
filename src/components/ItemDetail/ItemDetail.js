@@ -31,14 +31,14 @@ export const ItemDetail = ({ item }) => {
                 <div className="description-to-buy-item">
                     <ItemCount initialStock={1} stock={stock} onAdd={onAddItem} />
                     <div className='stock-info'>
-                        <p>Unidades disponibles: {stock}</p>
-                        <p>Items agregados: {itemsToBuy}</p>
+                        <p>Available units: {stock}</p>
+                        <p>Added items: {itemsToBuy}</p>
                     </div>
                 </div>
                 <hr />
                 <div className="description-to-buy-item">
                     <PostalCodeCalculator />
-                    <p>Total Envío</p>
+                    <p>Total shipment:</p>
                 </div>
             </div>
         </div>

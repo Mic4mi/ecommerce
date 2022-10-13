@@ -21,7 +21,6 @@ function ItemCount({ initialStock, stock, onAdd }) {
 
     return (
         <div className='item-count-container'>
-            {/* <p>Stock disponible {currentStock ? currentStock : stock}</p> */}
             <div className='counter-box'>
                 <button onClick={onAddOne} className='item-count-btn item-count-btn-hover'>
                     <FontAwesomeIcon icon={faPlus} />
@@ -34,9 +33,9 @@ function ItemCount({ initialStock, stock, onAdd }) {
             {outOfStockIndicatorVisibility ? <OutOfStockIndicator /> : null}
             <button className='item-count-addToCart-btn' onClick={() => {
                 onAdd(counter);
-                toast.success('Item agregado al carrito!', { duration: 3000, });
+                toast.success('Item successfully added to cart!', { duration: 3000, });
             }}>
-                Añadir al carrito
+                Add to cart
             </button>
             <Toaster position='bottom-center' toastOptions={{ className: 'toaster' }} />
         </div>

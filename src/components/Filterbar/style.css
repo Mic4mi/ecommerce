@@ -9,10 +9,6 @@
 }
 
 .a-filters-nav {
-    /* background-image: linear-gradient(to right,
-            #46dcd1,
-            #46dcd1 50%,
-            #444 50%); */
     background-image: linear-gradient(to right,
             rgba(70, 220, 209, 1) 0%,
             rgba(233, 133, 238, 1) 50%,

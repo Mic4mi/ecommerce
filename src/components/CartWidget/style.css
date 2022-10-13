@@ -19,7 +19,6 @@
 }
 
 .cart-btn-hover:hover {
-    /* background-color: #e985ee; */
     background: rgb(70, 220, 209);
     background: linear-gradient(90deg, rgba(70, 220, 209, 1) 0%, rgba(155, 175, 224, 1) 50%, rgba(233, 133, 238, 1) 100%);
     color: white;

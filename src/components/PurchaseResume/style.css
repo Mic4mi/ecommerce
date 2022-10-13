@@ -25,7 +25,6 @@
 }
 
 .purchase-btn:hover:enabled {
-    /* background-color: #46dcd1; */
     background: rgb(70, 220, 209);
     background: linear-gradient(90deg, #46dcd1 0%, #9bafe0 50%, #e985ee 100%);
     color: white;
