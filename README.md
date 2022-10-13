@@ -17,9 +17,12 @@ npm install
 npm start
 ```
 
-## Demo
+## Video testing
 
 https://user-images.githubusercontent.com/61918959/195475159-8442887d-98ee-441d-919c-9459efdb5fab.mp4
+
+# Demo
+You can test the application without downloading the code by following this [link](https://lovely-tanuki-7993e5.netlify.app/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
