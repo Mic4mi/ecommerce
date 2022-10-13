@@ -1,0 +1,19 @@
+.out-of-stock-indicator-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+}
+
+.stock-indicator {
+    /* display: none; */
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(231, 73, 73, 0.781);
+    width: 150px;
+}
+
+.out-of-stock-cross {
+    margin-left: 8%;
+    margin-right: 8%;
+}

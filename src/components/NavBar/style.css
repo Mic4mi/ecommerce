@@ -1,0 +1,134 @@
+.navbar-container {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    gap: 4%;
+    height: 1%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #444444;
+}
+
+.a-main-nav {
+    background-image: linear-gradient(to right,
+            #46dcd1,
+            #46dcd1 50%,
+            rgb(255, 255, 255) 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.a-main-nav:before {
+    content: '';
+    background: #46dcd1;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.a-main-nav:hover {
+    background-position: 0;
+}
+
+.a-main-nav:hover::before {
+    width: 100%;
+}
+
+.logo-brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18rem;
+}
+
+.log-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+}
+
+.li-separator {
+    font-size: 8px;
+    color: whitesmoke;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.li-nav-item {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.log-btn {
+    margin: 5px 5px 5px 5px;
+    background-color: #46dcd1;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.log-btn-hover {
+    background-color: white;
+    color: black;
+}
+
+.log-btn-hover:hover {
+    background-color: #46dcd1;
+    color: white;
+}
+
+#brand {
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+.navigation-links {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#main-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    margin: 3px 12px 3px 12px;
+}
+
+#navHome {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 0%;
+}

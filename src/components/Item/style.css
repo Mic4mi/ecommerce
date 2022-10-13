@@ -1,0 +1,37 @@
+.ItemContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5%;
+    height: 350px;
+    width: 270px;
+    border: 1px solid rgb(213, 213, 213);
+}
+
+.DescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    width: fit-content;
+    margin: 10px 10px 5px 10px;
+}
+
+.TextContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+
+.text-desc-product {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+#product-img {
+    width: 15.625rem;
+    height: 15.625rem;
+}

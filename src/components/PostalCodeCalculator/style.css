@@ -1,0 +1,47 @@
+.description-postalcode {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-postalcode {
+    height: 50px;
+    width: 13.1875em !important;
+    display: inline-block;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    text-align: center;
+}
+
+.calc-postalcode-btn {
+    height: 50px;
+    width: 210px;
+    margin-top: 5%;
+    border: 1px solid lightgray;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.calc-postalcode-btn:hover {
+    background: rgb(70, 220, 209);
+    background: linear-gradient(90deg, rgba(70, 220, 209, 1) 0%, rgba(155, 175, 224, 1) 50%, rgba(233, 133, 238, 1) 100%);
+    color: white;
+    transition: 0.4s;
+}
+
+.deliver-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#truck-icon {
+    margin-right: 2%;
+}

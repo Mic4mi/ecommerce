@@ -1,0 +1,7 @@
+.item-detail-container {
+    padding: 5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
