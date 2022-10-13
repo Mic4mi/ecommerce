@@ -25,7 +25,7 @@ export const commons = {
                 })
                 resolve(items);
             } else {
-                reject(new Error("No se han podido obtener los datos correctamente"));
+                reject(new Error("Data could not be obtained correctly"));
             }
         })
     },
@@ -44,7 +44,7 @@ export const commons = {
                 })
                 resolve(items);
             } else {
-                reject(new Error("No se han podido obtener los datos correctamente"));
+                reject(new Error("Data could not be obtained correctly"));
             }
         })
     },
@@ -60,7 +60,7 @@ export const commons = {
                 };
                 resolve(product);
             } else {
-                reject(new Error("No se han podido obtener los datos correctamente"));
+                reject(new Error("Data could not be obtained correctly"));
             }
         })
     }

@@ -21,9 +21,7 @@ export const CartContainer = () => {
     };
 
     const cleanCartListProducts = () => {
-        // limpiar el carrito
         clearCart();
-        // Limpiar los campos de los formularios
         document.getElementById('purchase-btn').disabled = false;
     };
 
@@ -58,17 +56,12 @@ export const CartContainer = () => {
             });
         };
 
-        // Evitar multiple click en btn de comprar
-
         document.getElementById('purchase-btn').disabled = true;
-
-        // Añadir orden
         const queryRef = collection(db, "orders");
         addDoc(queryRef, order)
             .then(async (response) => {
                 setOrderID(response.id)
                 toast.success(`The order ${response.id} has been successfully generated`, { duration: 3000 });
-                // Actualizar el stock de los productos en firebase
                 const docRef = doc(db, "orders", response.id);
                 const docSnap = await getDoc(docRef);
                 updateProducts(docSnap.data().items)
@@ -90,7 +83,7 @@ export const CartContainer = () => {
                                     !orderID
                                         ? (
                                             <div className='purchase-list'>
-                                                <h4>Resumen:</h4>
+                                                <h4>Summary:</h4>
                                                 {cartListProducts.map((item) => (
                                                     <div key={item.id} className='item-to-purchase'>
                                                         <div>
@@ -103,8 +96,8 @@ export const CartContainer = () => {
                                                         </button>
                                                     </div>
                                                 ))}
-                                                <h4>Total compra: ${getTotalPrice()}</h4>
-                                                <button className='purchase-end-btn purchase-btn' onClick={clearCart}>Vaciar carrito</button>
+                                                <h4>Total purchase: ${getTotalPrice()}</h4>
+                                                <button className='purchase-end-btn purchase-btn' onClick={clearCart}>Empty cart</button>
                                             </div>
                                         )
                                         : (<PurchaseResume items={cartListProducts} total={getTotalPrice()} onReset={cleanCartListProducts} />)
@@ -113,13 +106,13 @@ export const CartContainer = () => {
                                     <div className='form-container'>
                                         <form id="purchase-form" onSubmit={sendOrder}>
                                             <fieldset disabled={!cartListProducts.length ? true : false}>
-                                                <label>Nombre:</label>
+                                                <label>Name:</label>
                                                 <input type="text" name="name"></input>
-                                                <label>Teléfono</label>
+                                                <label>Phone</label>
                                                 <input type="text" name="phone"></input>
-                                                <label>Correo</label>
+                                                <label>Email</label>
                                                 <input type="text" name="email"></input>
-                                                <button id="purchase-btn" className='purchase-end-btn purchase-btn' type="submit" >Pagar</button>
+                                                <button id="purchase-btn" className='purchase-end-btn purchase-btn' type="submit" >Pay</button>
                                             </fieldset>
                                         </form>
                                     </div>

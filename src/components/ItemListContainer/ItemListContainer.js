@@ -6,7 +6,7 @@ import { commons } from '../../utils/helper/commons';
 import { Loader } from '../Loader/Loader';
 import { Toaster, toast } from 'react-hot-toast';
 
-function ItemListContainer({ greeting }) {
+function ItemListContainer() {
     const { categoryId } = useParams();
     const [items, setItems] = useState([]);
     useEffect(() => {

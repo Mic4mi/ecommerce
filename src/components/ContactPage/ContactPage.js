@@ -24,13 +24,13 @@ export const ContactPage = () => {
     <div className='form-container'>
       <form id="message-form" onSubmit={sendMessage}>
         <fieldset>
-          <label for="name">Nombre:</label>
+          <label for="name">Name:</label>
           <input id="name" type="text" name="name" />
-          <label for="email">Correo:</label>
+          <label for="email">Email:</label>
           <input id="email" type="text" name="email" />
-          <label for="message">Mensaje:</label>
+          <label for="message">Message:</label>
           <textarea id="message" name="message" maxLength={185} />
-          <button id="purchase-btn" className='purchase-end-btn purchase-btn' type="submit" >Enviar</button>
+          <button id="purchase-btn" className='purchase-end-btn purchase-btn' type="submit" >Send</button>
         </fieldset>
       </form>
       <Toaster position='bottom-center' toastOptions={{ className: 'toaster' }} />

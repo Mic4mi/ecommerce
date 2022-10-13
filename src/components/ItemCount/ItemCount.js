@@ -21,7 +21,6 @@ function ItemCount({ initialStock, stock, onAdd }) {
 
     return (
         <div className='item-count-container'>
-            {/* <p>Stock disponible {currentStock ? currentStock : stock}</p> */}
             <div className='counter-box'>
                 <button onClick={onAddOne} className='item-count-btn item-count-btn-hover'>
                     <FontAwesomeIcon icon={faPlus} />

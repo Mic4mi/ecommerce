@@ -7,7 +7,7 @@ function OutOfStockIndicator() {
         <div className='out-of-stock-indicator-container'>
             <p className='stock-indicator'>
                 <FontAwesomeIcon icon={faXmark} className="out-of-stock-cross" />
-                No hay stock
+                Out of stock
                 <FontAwesomeIcon icon={faXmark} className="out-of-stock-cross" />
             </p>
         </div>
