@@ -4,11 +4,11 @@ import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom'
 import { commons } from '../../utils/helper/commons';
 import { Loader } from '../Loader/Loader';
+import { Toaster, toast } from 'react-hot-toast';
 
 function ItemListContainer({ greeting }) {
     const { categoryId } = useParams();
     const [items, setItems] = useState([]);
-    // TO-DO añadir handling de errores
     useEffect(() => {
         commons.getData()
             .then((result) => {
@@ -21,16 +21,19 @@ function ItemListContainer({ greeting }) {
                     setItems(result);
                 }
             })
+            .catch(() => {
+                toast.error(`An error occurred while obtaining the product listing.`, { duration: 3000, });
+            })
     }, [categoryId]);
 
     return (
         <div className='ListContainer'>
-            {/* {greeting} */}
             {
                 items.length > 0
                     ? (<ItemList items={items} />)
                     : (<Loader />)
             }
+            <Toaster position='bottom-center' toastOptions={{ className: 'toaster' }} />
         </div>
     )
 }

@@ -13,10 +13,10 @@ export const ContactPage = () => {
     event.preventDefault();
     const isValid = getMessageData(event);
     if (!isValid) {
-      toast.error(`Los datos para enviar el mensaje no son correctos`, { duration: 3000, });
+      toast.error(`The data entered to send the message are not correct.`, { duration: 3000, });
       return;
     }
-    toast.success(`Mensaje enviado`, { duration: 3000 });
+    toast.success(`Message sent successfully`, { duration: 3000 });
     document.getElementById('message-form').reset();
   }
 

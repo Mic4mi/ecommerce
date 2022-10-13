@@ -1,11 +1,7 @@
 import './style.css';
 import { Link } from 'react-router-dom'
-// import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer';
 
-// TO-DO estilizar componentes
 function Item({ item }) {
-    //key, name, description, price, stock, img
-    // TO-DO Linkear la imagen al id
     return (
         <div className='ItemContainer'>
             <div className='DescriptionContainer'>

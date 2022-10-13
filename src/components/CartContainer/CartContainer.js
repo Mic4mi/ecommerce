@@ -31,7 +31,7 @@ export const CartContainer = () => {
         event.preventDefault();
         const isValid = getProfileData(event);
         if (!isValid) {
-            toast.error(`Los datos para realizar la compra no son correctos.`, { duration: 3000, });
+            toast.error(`The data entered to make the purchase are not correct.`, { duration: 3000, });
             return;
         }
 
@@ -50,7 +50,7 @@ export const CartContainer = () => {
             items.forEach(item => {
                 const queryRef = doc(db, "items", item.id);
                 let currentStock = item.stock - item.quantity;
-                //actualizar
+                // Actualizar
                 updateDoc(queryRef, {
                     stock: currentStock,
                     quantity: 0
@@ -58,7 +58,7 @@ export const CartContainer = () => {
             });
         };
 
-        //Evitar multiple click en btn de comprar
+        // Evitar multiple click en btn de comprar
 
         document.getElementById('purchase-btn').disabled = true;
 
@@ -67,7 +67,7 @@ export const CartContainer = () => {
         addDoc(queryRef, order)
             .then(async (response) => {
                 setOrderID(response.id)
-                toast.success(`La orden ${response.id} ha sido generada`, { duration: 3000 });
+                toast.success(`The order ${response.id} has been successfully generated`, { duration: 3000 });
                 // Actualizar el stock de los productos en firebase
                 const docRef = doc(db, "orders", response.id);
                 const docSnap = await getDoc(docRef);
@@ -75,7 +75,7 @@ export const CartContainer = () => {
                 document.getElementById('purchase-form').reset();
             })
             .catch((error) => {
-                toast.error(`Ocurrió un error procesando su solicitud`, { duration: 3000 });
+                toast.error(`An error occurred processing your request.`, { duration: 3000 });
             })
     };
 
